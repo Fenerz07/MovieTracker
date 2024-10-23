@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Movie Tracker est une application web développée avec Next.js qui vous permet de suivre les films que vous avez regardés 🎞️, souhaitez regarder 📅, et découvrir de nouveaux films 🔍. Avec une interface intuitive et responsive, c'est l'outil parfait pour tous les cinéphiles 🎬 !
 
-## Getting Started
 
-First, run the development server:
+📋 Fonctionnalités
 
-```bash
+
+Suivi des films : Ajoutez des films à votre liste de visionnage 🎞️ ou marquez-les comme déjà vus ✅.
+
+Découverte : Explorez une collection de films recommandés en fonction de vos goûts 💡.
+
+Filtrage et tri : Filtrez vos films par genre, note ou date de sortie 🎯.
+
+Notes et commentaires : Notez les films que vous avez vus et laissez vos avis 📝.
+
+Recherche intelligente : Trouvez des films en recherchant par titre, réalisateur ou acteur 🔍.
+
+🛠️ Installation
+
+Clonez le repo :
+
+git clone https://github.com/Fenerz07/MovieTracker
+
+Allez dans le dossier du projet :
+
+cd movie-tracker
+
+Installez les dépendances :
+
+npm install
+
+Lancez l'application :
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
