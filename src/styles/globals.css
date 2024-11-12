@@ -12,20 +12,19 @@ body::-webkit-scrollbar {
 
 .indexallmovies h1,h2{
     text-align: center;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .indexallmovies img{
     width: 12rem;
     height: 17rem;
-    margin: 1rem;
+    border:#000000 3px solid;
 }
 
 .indexulmovies{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     justify-content: space-around;
-    margin: 1rem;
 }
 
 .indexulmovies li{
@@ -33,7 +32,19 @@ body::-webkit-scrollbar {
     margin: 1rem;
 }
 
-.indexulmovies li h4{
-    text-decoration: none;
+.indexulmovies li h3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4.2rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: #4169e1;
     color: #f5f5f5;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
 }

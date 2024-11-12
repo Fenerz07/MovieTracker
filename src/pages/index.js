@@ -76,8 +76,7 @@ export default function Home() {
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                 alt={movie.title}
               />
-              <h2>SCORE</h2>
-              <h1>{PourcentageRate(movie.vote_average)}%</h1>
+              <h3>{PourcentageRate(movie.vote_average)}</h3>
             </li>
           ))}
         </ul>
