@@ -1,0 +1,26 @@
+.upcomingall h1,h2{
+    text-align: center;
+    margin: 2rem;
+}
+
+.upcomingall img{
+    width: 12rem;
+    height: 17rem;
+    border:#000000 3px solid;
+}
+
+.upcomingul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-around;
+}
+
+.upcomingul li{
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.upcomingul li h3{
+    text-align: center;
+    margin-right: 2.5rem;
+}
