@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import style from '../styles/upcoming.css';
+import style from '../styles/top.css';
 
-export default function UpcomingMovies() {
+export default function TopMovies() {
   const [movies, setMovies] = useState([]);
   const carouselRef = useRef(null);
   const isScrolling = useRef(false); 
@@ -11,7 +11,7 @@ export default function UpcomingMovies() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const response = await fetch('/api/upcoming');
+        const response = await fetch('/api/top');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -75,24 +75,6 @@ export default function UpcomingMovies() {
     };
   }, []);
 
-  function ReleaseDate(date) {
-    let releaseDate = new Date(date);
-    let options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return releaseDate.toLocaleDateString('fr-FR', options);
-  }
-
-  function compareDate(date) {
-    let today = new Date();
-    let releaseDate = new Date(date);
-    if (today < releaseDate) {
-      return ReleaseDate(date);
-    }
-  }
-
-  function isImageValid(image) {
-    return image !== null;
-  }
-
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
@@ -105,34 +87,20 @@ export default function UpcomingMovies() {
     }
   };
 
-  const removeDuplicateMovies = (movies) => {
-    let uniqueMovies = [];
-    let movieIds = [];
-    movies.forEach((movie) => {
-      if (!movieIds.includes(movie.id)) {
-        uniqueMovies.push(movie);
-        movieIds.push(movie.id);
-      }
-    });
-    return uniqueMovies;
-  }
-
   return (
     <div className="upcoming-container">
-      <h1>Prochainement...</h1>
+      <h1>Meilleurs Films</h1>
       <div className="carousel-wrapper">
         <button className="scroll-button left" onClick={scrollLeft}>←</button>
         <div className="carousel" ref={carouselRef}>
-          {removeDuplicateMovies(movies).map((movie) => ( 
-            compareDate(movie.release_date) && isImageValid(movie.poster_path) ? (
-              <div className="carousel-item" key={movie.id}>
+          {movies.map((movie) => (
+            <div className="carousel-item" key={movie.id}>
                 <img draggable="false"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                   alt={movie.title}
                 />
-                <h3>{compareDate(movie.release_date)}</h3>
-              </div>
-            ) : null
+                <h3>{movie.genres && movie.genres.length > 0 ? movie.genres[0].name : 'Unknown Genre'}</h3>
+            </div>
           ))}
         </div>
         <button className="scroll-button right" onClick={scrollRight}>→</button>

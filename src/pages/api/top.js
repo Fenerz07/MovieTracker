@@ -2,13 +2,13 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
-  const BASE_URL = 'https://api.themoviedb.org/3/movie/upcoming?language=fr-FR';
+  const BASE_URL = 'https://api.themoviedb.org/3/movie/top_rated?language=fr-FR';
 
   try {
     let allMovies = [];
     let currentPage = 1;
     let totalPages = 1;
-    const MAX_PAGES = 20; 
+    const MAX_PAGES = 20;
 
     while (currentPage <= totalPages && currentPage <= MAX_PAGES) {
       const response = await axios.get(`${BASE_URL}`, {
