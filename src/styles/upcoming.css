@@ -1,4 +1,3 @@
-/* Styles généraux */
 .upcoming-container {
     padding: 20px;
   }
@@ -8,14 +7,12 @@
     margin-bottom: 20px;
   }
   
-  /* Wrapper du carrousel pour positionner les boutons */
   .carousel-wrapper {
     position: relative;
     display: flex;
     align-items: center;
   }
   
-  /* Boutons de défilement */
   .scroll-button {
     position: absolute;
     top: 50%;
@@ -42,23 +39,21 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
   
-  /* Conteneur du carrousel */
   .carousel {
     display: flex;
     gap: 15px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Masquer la barre de défilement par défaut sur Firefox */
+    scrollbar-width: none; 
   }
   
   .carousel::-webkit-scrollbar {
-    display: none; /* Masquer la barre de défilement sur Chrome, Safari et Opera */
+    display: none; 
   }
   
-  /* Élément individuel du carrousel */
   .carousel-item {
     flex: 0 0 auto;
-    width: 180px; /* Ajustez la taille selon vos préférences */
+    width: 180px; 
     background: #000;
     color: #fff;
     border-radius: 8px;
@@ -69,7 +64,7 @@
   
   .carousel-item img {
     width: 100%;
-    height: 250px; /* Ajustez la hauteur selon vos préférences */
+    height: 250px; 
     object-fit: cover;
     border-bottom: 2px solid #fff;
   }
@@ -77,5 +72,25 @@
   .carousel-item h3 {
     font-size: 14px;
     padding: 10px 0;
+  }
+
+  .top-movies-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .loading-spinner {
+    border: 6px solid #f3f3f3; 
+    border-top: 6px solid #3498db; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   

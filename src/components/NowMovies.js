@@ -3,10 +3,8 @@ import style from '../styles/popular.css';
 
 export default function NowMovies() {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
   const carouselRef = useRef(null);
-  const isScrolling = useRef(false); 
-
-  const SCROLL_STEP = 300; 
 
   useEffect(() => {
     async function fetchMovies() {
@@ -19,59 +17,13 @@ export default function NowMovies() {
         setMovies(data.results);
       } catch (error) {
         console.error('Error fetching movies:', error);
+      } finally {
+        setLoading(false);
       }
     }
 
     fetchMovies();
-    const handleScroll = (event) => {
-      if (carouselRef.current && !isScrolling.current) {
-        event.preventDefault();
-
-        isScrolling.current = true;
-
-        const scrollAmount = event.deltaY > 0 ? SCROLL_STEP : -SCROLL_STEP;
-
-        carouselRef.current.scrollBy({
-          left: scrollAmount,
-          behavior: 'smooth',
-        });
-
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 500); 
-      }
-    };
-
-    const disableVerticalScroll = (event) => {
-      if (carouselRef.current) {
-        event.preventDefault(); 
-      }
-    };
-
-    const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.addEventListener('wheel', handleScroll, { passive: false });
-
-      carousel.addEventListener('mouseenter', () => {
-        document.body.style.overflow = 'hidden'; 
-      });
-
-      carousel.addEventListener('mouseleave', () => {
-        document.body.style.overflow = ''; 
-      });
-    }
-
-    return () => {
-      if (carousel) {
-        carousel.removeEventListener('wheel', handleScroll);
-        carousel.removeEventListener('mouseenter', () => {
-          document.body.style.overflow = 'hidden';
-        });
-        carousel.removeEventListener('mouseleave', () => {
-          document.body.style.overflow = '';
-        });
-      }
-    };
+    
   }, []);
 
   const scrollLeft = () => {
@@ -103,6 +55,9 @@ export default function NowMovies() {
   return (
     <div className="upcoming-container">
       <h1>Films du moment</h1>
+      {loading ? (
+        <div className="loading-spinner"></div> 
+      ) : (
       <div className="carousel-wrapper">
         <button className="scroll-button left" onClick={scrollLeft}>←</button>
         <div className="carousel" ref={carouselRef}>
@@ -120,6 +75,7 @@ export default function NowMovies() {
         </div>
         <button className="scroll-button right" onClick={scrollRight}>→</button>
       </div>
+      )}
     </div>
   );
 }
