@@ -5,15 +5,13 @@ export default function Header() {
   return (
     <div className='headerglobaldiv'>
         <div className='headerleftdiv'>
-            <h1>MTracker</h1>
             <nav>
                 <ul>
-                    <a href="/">Accueil</a>
                     <a href="/film">Films</a>
-                    <a href="/serie">Séries</a>
                 </ul>
             </nav>
         </div>
+        <h1><a href="/">MTracker</a></h1>
         <div className='headerrightdiv'>
             <img src='../image/bxl-search.svg'></img>
         </div>

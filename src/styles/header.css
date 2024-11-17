@@ -2,18 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1a1a1a;
+  background-color: rgba(26, 26, 26, 0.8);
   color: white;
-  padding: 10px;
+  padding: 0px;
   font-size: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
 }
 
-.headerglobaldiv a {
+.headerleftdiv a {
   color: white;
   text-decoration: none;
 }
 
-.headerglobaldiv a:hover {
+.headerleftdiv a:hover {
   color: #4169e1;
 }
 
@@ -23,18 +27,14 @@
   justify-content: space-between;
 }
 
-.headerleftdiv h1 {
-  margin: 1rem;
+.headerglobaldiv h1 a {
   font-weight: bold;
+  text-decoration: none;
   color: #4169e1;
-}
-
-.headerleftdiv a {
-  margin: 1rem;
 }
 
 .headerrightdiv {
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: 4rem;
 }

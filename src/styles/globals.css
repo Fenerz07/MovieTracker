@@ -14,7 +14,6 @@ body::-webkit-scrollbar {
     user-select: none;
   }
   
-  /* Autoriser la sélection sur les champs de texte ou les éléments spécifiques */
   input, textarea {
     user-select: text;
   }
