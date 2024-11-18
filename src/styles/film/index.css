@@ -1,0 +1,40 @@
+.indexallmovies {
+    padding: 20px;
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.indexallmovies h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.indexulmovies {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.indexulmovies li {
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.indexulmovies img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.indexulmovies img:hover {
+    transform: scale(1.05);
+}
+
+.indexulmovies h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}

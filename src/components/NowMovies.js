@@ -63,7 +63,9 @@ export default function NowMovies() {
         <div className="carousel" ref={carouselRef}>
           {movies.map((movie) => (
             <div className="carousel-item" key={movie.id}>
-                <img draggable="false"
+                <img 
+                  draggable="false" 
+                  onClick={() => window.location.href = `/film/${movie.id}`}
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                   alt={movie.title}
                 />

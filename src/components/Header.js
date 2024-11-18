@@ -8,6 +8,9 @@ export default function Header() {
             <nav>
                 <ul>
                     <a href="/film">Films</a>
+                    {/* <a href="/film">Films</a> */}
+                    {/* <a href="/acteur">Acteurs</a> */}
+                    {/* <a href="/realisateur">Réalisateurs</a> */}
                 </ul>
             </nav>
         </div>

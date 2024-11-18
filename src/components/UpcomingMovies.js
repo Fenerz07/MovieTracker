@@ -80,7 +80,9 @@ export default function UpcomingMovies() {
           {removeDuplicateMovies(movies).map((movie) => ( 
             compareDate(movie.release_date) && isImageValid(movie.poster_path) ? (
               <div className="carousel-item" key={movie.id}>
-                <img draggable="false"
+                <img 
+                  draggable="false"
+                  onClick={() => window.location.href = `/film/${movie.id}`}
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                   alt={movie.title}
                 />

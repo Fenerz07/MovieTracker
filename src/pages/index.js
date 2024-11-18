@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div style={{ height: "200vh", userSelect: "none" }}>
       <Header />
-      <div style={{paddingTop:"8rem"}}>
+      <div style={{paddingTop:"6rem"}}>
         <TopMovies />
         <NowMovies />
         <UpcomingMovies />
