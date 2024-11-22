@@ -67,6 +67,11 @@
     height: 250px;
     object-fit: cover;
     border-bottom: 2px solid #fff;
+    transition: transform 0.3s;
+  }
+
+  .carousel-item img:hover {
+    transform: scale(1.05);
   }
   
   .carousel-item h4 {

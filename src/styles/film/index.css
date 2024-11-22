@@ -1,6 +1,6 @@
 .indexallmovies {
     padding: 20px;
-    padding-top: 8rem;
+    padding-top: 5rem;
     text-align: center;
 }
 
@@ -37,4 +37,29 @@
 .indexulmovies h3 {
     font-size: 1.2em;
     margin-top: 10px;
+}
+
+.filtermovies{
+    justify-content: center;
+    padding-top: 11rem;
+}
+
+.filtermoviestitles{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.filtermoviestitles h2{
+    margin: 0 1rem;
+}
+
+.filtermoviesselect{
+    display: flex;
+    justify-content: center;
+}
+
+.filtermoviesselect select{
+    padding: 0.5rem;
+    margin: 0 2rem;
 }

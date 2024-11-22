@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     let allMovies = [];
     let currentPage = 1;
     let totalPages = 1;
-    const MAX_PAGES = 20; 
+    const MAX_PAGES = 20;
 
     while (currentPage <= totalPages && currentPage <= MAX_PAGES) {
       const response = await axios.get(`${BASE_URL}`, {
