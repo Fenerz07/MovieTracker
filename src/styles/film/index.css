@@ -39,19 +39,18 @@
     margin-top: 10px;
 }
 
-.filtermovies{
+/* allFiltersPart */
+
+.allfilters {
+    display: flex;
     justify-content: center;
     padding-top: 11rem;
 }
 
-.filtermoviestitles{
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-}
+/* filterMoviesPart */
 
-.filtermoviestitles h2{
-    margin: 0 1rem;
+.filtermovies{
+    justify-content: center;
 }
 
 .filtermoviesselect{
@@ -60,6 +59,22 @@
 }
 
 .filtermoviesselect select{
+    padding: 0.5rem;
+    margin: 0 2rem;
+}
+
+/* filterRankpart */
+
+.filterrank{
+    justify-content: center;
+}
+
+.filterrankselect{
+    display: flex;
+    justify-content: center;
+}
+
+.filterrankselect select{
     padding: 0.5rem;
     margin: 0 2rem;
 }

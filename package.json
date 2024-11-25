@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.25.9",
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "next": "15.0.0",
